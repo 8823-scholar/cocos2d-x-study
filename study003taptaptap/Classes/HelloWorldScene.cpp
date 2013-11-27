@@ -1,4 +1,5 @@
 #include "HelloWorldScene.h"
+#include "BFSprite.h"
 
 USING_NS_CC;
 
@@ -29,6 +30,9 @@ bool HelloWorld::init()
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
+
+    this->setTouchMode(kCCTouchesOneByOne);
+    this->setTouchEnabled(true);
 
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
@@ -64,7 +68,10 @@ bool HelloWorld::init()
     this->addChild(label, 1);
 
     // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
+    //auto sprite = Sprite::create("HelloWorld.png");
+    auto sprite = BFSprite::create("miku.JK.jpg");
+    sprite->setScale(0.5);
+    sprite->setTag(1);
 
     // position the sprite on the center of the screen
     sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
@@ -84,3 +91,14 @@ void HelloWorld::menuCloseCallback(Object* pSender)
     exit(0);
 #endif
 }
+
+bool HelloWorld::onTouchBegan(Touch* touch, Event* event)
+{
+    BFSprite* sprite = (BFSprite*)this->getChildByTag(1);
+    CCLOG("tapped");
+    if (sprite->isTapped(touch->getLocation())) {
+        CCLOG("miku tapped !! H !");
+    }
+    return true;
+}
+
