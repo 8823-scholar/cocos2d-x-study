@@ -92,13 +92,44 @@ void HelloWorld::menuCloseCallback(Object* pSender)
 #endif
 }
 
+/**
+ * タップ開始時にコールされる
+ *
+ * @return  boolean
+ */
 bool HelloWorld::onTouchBegan(Touch* touch, Event* event)
 {
     BFSprite* sprite = (BFSprite*)this->getChildByTag(1);
-    CCLOG("tapped");
     if (sprite->isTapped(touch->getLocation())) {
-        CCLOG("miku tapped !! H !");
+        log("miku tapped !! H !");
     }
     return true;
+}
+
+/**
+ * タップ開始後、移動するとコールされる
+ *
+ * @return  void
+ */
+void HelloWorld::onTouchMoved(Touch* touch, Event* event)
+{
+    BFSprite* sprite = (BFSprite*)this->getChildByTag(1);
+    if (sprite->isTapped(touch->getLocation())) {
+        sprite->setPosition(touch->getLocation());
+    }
+}
+
+/**
+ * タップが終了するとコールされる
+ *
+ * @return  void
+ */
+void HelloWorld::onTouchEnded(Touch* touch, Event* event)
+{
+    BFSprite* sprite = (BFSprite*)this->getChildByTag(1);
+    if (sprite->isTapped(touch->getLocation())) {
+        Point point = touch->getLocation();
+        sprite->setPositionY(point.y - 10);
+    }
 }
 
