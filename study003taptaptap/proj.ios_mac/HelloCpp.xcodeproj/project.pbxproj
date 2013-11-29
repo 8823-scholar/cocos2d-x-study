@@ -71,6 +71,9 @@
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		DBBE590118452495008BCE95 /* miku.JK.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBBE590018452495008BCE95 /* miku.JK.jpg */; };
 		DBBE59281845ABEC008BCE95 /* BFSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBBE59271845ABEC008BCE95 /* BFSprite.cpp */; };
+		DBBE592A1847FA67008BCE95 /* aikotoba.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DBBE59291847FA67008BCE95 /* aikotoba.mp3 */; };
+		DBBE592C1847FB8E008BCE95 /* pew-pew-lei.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBBE592B1847FB8E008BCE95 /* pew-pew-lei.wav */; };
+		DBBE592E1847FD91008BCE95 /* honto-ha-wakatteru.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DBBE592D1847FD91008BCE95 /* honto-ha-wakatteru.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -299,6 +302,9 @@
 		DBBE590018452495008BCE95 /* miku.JK.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = miku.JK.jpg; sourceTree = "<group>"; };
 		DBBE59261845ABEC008BCE95 /* BFSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFSprite.h; path = ../Classes/BFSprite.h; sourceTree = "<group>"; };
 		DBBE59271845ABEC008BCE95 /* BFSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BFSprite.cpp; path = ../Classes/BFSprite.cpp; sourceTree = "<group>"; };
+		DBBE59291847FA67008BCE95 /* aikotoba.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = aikotoba.mp3; sourceTree = "<group>"; };
+		DBBE592B1847FB8E008BCE95 /* pew-pew-lei.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "pew-pew-lei.wav"; sourceTree = "<group>"; };
+		DBBE592D1847FD91008BCE95 /* honto-ha-wakatteru.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "honto-ha-wakatteru.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -492,6 +498,9 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DBBE592D1847FD91008BCE95 /* honto-ha-wakatteru.mp3 */,
+				DBBE592B1847FB8E008BCE95 /* pew-pew-lei.wav */,
+				DBBE59291847FA67008BCE95 /* aikotoba.mp3 */,
 				DBBE590018452495008BCE95 /* miku.JK.jpg */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
@@ -698,15 +707,18 @@
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
+				DBBE592E1847FD91008BCE95 /* honto-ha-wakatteru.mp3 in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
+				DBBE592A1847FA67008BCE95 /* aikotoba.mp3 in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
+				DBBE592C1847FB8E008BCE95 /* pew-pew-lei.wav in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,

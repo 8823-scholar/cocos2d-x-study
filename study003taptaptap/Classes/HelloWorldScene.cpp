@@ -1,5 +1,6 @@
 #include "HelloWorldScene.h"
 #include "BFSprite.h"
+#include "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
@@ -78,6 +79,9 @@ bool HelloWorld::init()
 
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
+
+    // BGM
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("honto-ha-wakatteru.mp3", true);
     
     return true;
 }
@@ -102,6 +106,7 @@ bool HelloWorld::onTouchBegan(Touch* touch, Event* event)
     BFSprite* sprite = (BFSprite*)this->getChildByTag(1);
     if (sprite->isTapped(touch->getLocation())) {
         log("miku tapped !! H !");
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("pew-pew-lei.wav");
     }
     return true;
 }
@@ -130,6 +135,7 @@ void HelloWorld::onTouchEnded(Touch* touch, Event* event)
     if (sprite->isTapped(touch->getLocation())) {
         Point point = touch->getLocation();
         sprite->setPositionY(point.y - 10);
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("pew-pew-lei.wav");
     }
 }
 
