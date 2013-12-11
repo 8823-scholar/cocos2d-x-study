@@ -14,6 +14,7 @@ public:
     
     // a selector callback
     void menuCloseCallback(Object* pSender);
+    void playVideoCallback(Object *pSender);
     
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);

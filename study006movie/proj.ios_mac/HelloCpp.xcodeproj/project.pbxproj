@@ -69,6 +69,10 @@
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
+		DB055AB6184F68DE00ECE5FD /* iOSWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB055AB2184F68DE00ECE5FD /* iOSWrapper.mm */; };
+		DB055AB7184F68DE00ECE5FD /* SimpleVideoEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB055AB3184F68DE00ECE5FD /* SimpleVideoEngine.cpp */; };
+		DB5D9B4218504CC20001A782 /* renai-circulation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DB5D9B4118504CC20001A782 /* renai-circulation.mp4 */; };
+		DB80CCFF1857565C00CFF744 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB80CCFE1857565C00CFF744 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -294,6 +298,12 @@
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DB055AB2184F68DE00ECE5FD /* iOSWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = iOSWrapper.mm; path = ../Classes/befool/iOSWrapper.mm; sourceTree = "<group>"; };
+		DB055AB3184F68DE00ECE5FD /* SimpleVideoEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SimpleVideoEngine.cpp; path = ../Classes/befool/SimpleVideoEngine.cpp; sourceTree = "<group>"; };
+		DB055AB4184F68DE00ECE5FD /* SimpleVideoEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleVideoEngine.h; path = ../Classes/befool/SimpleVideoEngine.h; sourceTree = "<group>"; };
+		DB055AB5184F68DE00ECE5FD /* iOSWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iOSWrapper.h; path = ../Classes/befool/iOSWrapper.h; sourceTree = "<group>"; };
+		DB5D9B4118504CC20001A782 /* renai-circulation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "renai-circulation.mp4"; sourceTree = "<group>"; };
+		DB80CCFE1857565C00CFF744 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +311,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB80CCFF1857565C00CFF744 /* MediaPlayer.framework in Frameworks */,
 				1AF4C2F417865DCB00122817 /* libbox2d iOS.a in Frameworks */,
 				1AF4C2F517865DCB00122817 /* libchipmunk iOS.a in Frameworks */,
 				1AF4C2F617865DCB00122817 /* libcocos2dx iOS.a in Frameworks */,
@@ -363,6 +374,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DB055ABE184F695500ECE5FD /* befool */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
@@ -419,6 +431,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB80CCFE1857565C00CFF744 /* MediaPlayer.framework */,
 				503AE11A17EB9C5A00D1A890 /* IOKit.framework */,
 				503AE11117EB99EE00D1A890 /* libcurl.dylib */,
 				5087E78A17EB975400C73F5D /* OpenGL.framework */,
@@ -485,12 +498,24 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DB5D9B4118504CC20001A782 /* renai-circulation.mp4 */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
 			);
 			name = Resources;
 			path = ../Resources;
+			sourceTree = "<group>";
+		};
+		DB055ABE184F695500ECE5FD /* befool */ = {
+			isa = PBXGroup;
+			children = (
+				DB055AB2184F68DE00ECE5FD /* iOSWrapper.mm */,
+				DB055AB3184F68DE00ECE5FD /* SimpleVideoEngine.cpp */,
+				DB055AB4184F68DE00ECE5FD /* SimpleVideoEngine.h */,
+				DB055AB5184F68DE00ECE5FD /* iOSWrapper.h */,
+			);
+			name = befool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -694,6 +719,7 @@
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
+				DB5D9B4218504CC20001A782 /* renai-circulation.mp4 in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
@@ -730,6 +756,8 @@
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
+				DB055AB7184F68DE00ECE5FD /* SimpleVideoEngine.cpp in Sources */,
+				DB055AB6184F68DE00ECE5FD /* iOSWrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
