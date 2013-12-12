@@ -69,6 +69,13 @@
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
+		DB34CF8D1858B8FF0020B8DD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB34CF8C1858B8FF0020B8DD /* MediaPlayer.framework */; };
+		DB34CF951858B9690020B8DD /* miku.gif in Resources */ = {isa = PBXBuildFile; fileRef = DB34CF941858B9690020B8DD /* miku.gif */; };
+		DB34CFA21858E0870020B8DD /* miku-notanimated-0.png in Resources */ = {isa = PBXBuildFile; fileRef = DB34CF9E1858E0870020B8DD /* miku-notanimated-0.png */; };
+		DB34CFA31858E0870020B8DD /* miku-notanimated-1.png in Resources */ = {isa = PBXBuildFile; fileRef = DB34CF9F1858E0870020B8DD /* miku-notanimated-1.png */; };
+		DB34CFA41858E0870020B8DD /* miku-notanimated-2.png in Resources */ = {isa = PBXBuildFile; fileRef = DB34CFA01858E0870020B8DD /* miku-notanimated-2.png */; };
+		DB34CFA51858E0870020B8DD /* miku-notanimated-3.png in Resources */ = {isa = PBXBuildFile; fileRef = DB34CFA11858E0870020B8DD /* miku-notanimated-3.png */; };
+		DB34CFA71859593F0020B8DD /* miku-tiled.png in Resources */ = {isa = PBXBuildFile; fileRef = DB34CFA61859593F0020B8DD /* miku-tiled.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -294,6 +301,13 @@
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DB34CF8C1858B8FF0020B8DD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		DB34CF941858B9690020B8DD /* miku.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = miku.gif; sourceTree = "<group>"; };
+		DB34CF9E1858E0870020B8DD /* miku-notanimated-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "miku-notanimated-0.png"; sourceTree = "<group>"; };
+		DB34CF9F1858E0870020B8DD /* miku-notanimated-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "miku-notanimated-1.png"; sourceTree = "<group>"; };
+		DB34CFA01858E0870020B8DD /* miku-notanimated-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "miku-notanimated-2.png"; sourceTree = "<group>"; };
+		DB34CFA11858E0870020B8DD /* miku-notanimated-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "miku-notanimated-3.png"; sourceTree = "<group>"; };
+		DB34CFA61859593F0020B8DD /* miku-tiled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "miku-tiled.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +315,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB34CF8D1858B8FF0020B8DD /* MediaPlayer.framework in Frameworks */,
 				1AF4C2F417865DCB00122817 /* libbox2d iOS.a in Frameworks */,
 				1AF4C2F517865DCB00122817 /* libchipmunk iOS.a in Frameworks */,
 				1AF4C2F617865DCB00122817 /* libcocos2dx iOS.a in Frameworks */,
@@ -419,6 +434,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB34CF8C1858B8FF0020B8DD /* MediaPlayer.framework */,
 				503AE11A17EB9C5A00D1A890 /* IOKit.framework */,
 				503AE11117EB99EE00D1A890 /* libcurl.dylib */,
 				5087E78A17EB975400C73F5D /* OpenGL.framework */,
@@ -485,6 +501,12 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DB34CFA61859593F0020B8DD /* miku-tiled.png */,
+				DB34CF9E1858E0870020B8DD /* miku-notanimated-0.png */,
+				DB34CF9F1858E0870020B8DD /* miku-notanimated-1.png */,
+				DB34CFA01858E0870020B8DD /* miku-notanimated-2.png */,
+				DB34CFA11858E0870020B8DD /* miku-notanimated-3.png */,
+				DB34CF941858B9690020B8DD /* miku.gif */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
@@ -687,10 +709,15 @@
 			files = (
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
+				DB34CF951858B9690020B8DD /* miku.gif in Resources */,
+				DB34CFA71859593F0020B8DD /* miku-tiled.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
+				DB34CFA31858E0870020B8DD /* miku-notanimated-1.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
+				DB34CFA51858E0870020B8DD /* miku-notanimated-3.png in Resources */,
+				DB34CFA41858E0870020B8DD /* miku-notanimated-2.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
@@ -698,6 +725,7 @@
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
+				DB34CFA21858E0870020B8DD /* miku-notanimated-0.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,

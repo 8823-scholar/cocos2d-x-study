@@ -64,13 +64,43 @@ bool HelloWorld::init()
     this->addChild(label, 1);
 
     // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
+    
+    /*
+    Sprite *miku = Sprite::create("miku-notanimated-0.png");
+    miku->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    this->addChild(miku);
 
-    // position the sprite on the center of the screen
-    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    // 続くパラパラアニメを登録
+    Animation *animation = Animation::create();
+    animation->addSpriteFrameWithFileName("miku-notanimated-1.png");
+    animation->addSpriteFrameWithFileName("miku-notanimated-2.png");
+    animation->addSpriteFrameWithFileName("miku-notanimated-3.png");
+    animation->setRestoreOriginalFrame(true);   // 最初の画像に戻すかどうか
+    animation->setDelayPerUnit(0.5f / 4.0f);
 
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
+    // パラパラアニメを動かす
+    Animate *animate = Animate::create(animation);
+    RepeatForever *animated = RepeatForever::create(animate);
+    miku->runAction(animated);
+    */
+    
+    Sprite *miku = Sprite::create();
+    miku->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    this->addChild(miku);
+    
+    // パラパラアニメを登録
+    const int IMAGE_SIZE = 200;
+    Animation *animation = Animation::create();
+    animation->setDelayPerUnit(0.5f / 4.0f);
+    for (int i = 0; i < 4; i++ ) {
+        animation->addSpriteFrame(SpriteFrame::create("miku-tiled.png", Rect(IMAGE_SIZE * i, 0, IMAGE_SIZE, IMAGE_SIZE)));
+    }
+    
+    // パラパラアニメを動かす
+    Animate *animate = Animate::create(animation);
+    RepeatForever *animated = RepeatForever::create(animate);
+    miku->runAction(animated);
+
     
     return true;
 }
