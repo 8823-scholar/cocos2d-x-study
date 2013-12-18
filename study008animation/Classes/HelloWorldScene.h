@@ -14,9 +14,12 @@ public:
     
     // a selector callback
     void menuCloseCallback(Object* pSender);
+    void menuRunCallback(Object* pSender);
     
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
+private:
+    cocos2d::Sprite *sprite;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

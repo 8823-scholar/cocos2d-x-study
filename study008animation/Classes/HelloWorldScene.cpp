@@ -62,17 +62,116 @@ bool HelloWorld::init()
 
     // add the label as a child to this layer
     this->addChild(label, 1);
-
-    // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
-
-    // position the sprite on the center of the screen
-    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
     
+    /**
+     * 動作ボタン
+     */
+    auto runItem = MenuItemImage::create(
+                                           "CloseNormal.png",
+                                           "CloseSelected.png",
+                                           CC_CALLBACK_1(HelloWorld::menuRunCallback, this));
+	runItem->setPosition(Point(origin.x + visibleSize.width - runItem->getContentSize().width*2 ,
+                                origin.y + runItem->getContentSize().height/2));
+    auto menu2 = Menu::create(runItem, NULL);
+    menu2->setPosition(Point::ZERO);
+    this->addChild(menu2, 1);
+
+    this->sprite = Sprite::create("miku.JK.jpg");
+    this->sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    this->sprite->setScale(0.5);
+    this->addChild(this->sprite, 0);
+
     return true;
+}
+
+void HelloWorld::menuRunCallback(Object* pSender)
+{
+    /*
+    // 移動
+    FiniteTimeAction* move = MoveTo::create(1.0f, Point(0, 0));
+    this->sprite->runAction(move);
+    */
+    
+    /*
+    // スケール
+    FiniteTimeAction* scale = ScaleTo::create(1.0f, 2.0f);
+    this->sprite->runAction(scale);
+    */
+
+    /*
+    // 回転
+    FiniteTimeAction* rotate = RotateTo::create(1.0f, 180.0f);
+    this->sprite->runAction(rotate);
+    */
+    
+    /*
+    // スキュー
+    FiniteTimeAction* skew = SkewTo::create(1.0f, 30.0f, 45.0f);
+    this->sprite->runAction(skew);
+    */
+    
+    /*
+    // 透明度
+    FiniteTimeAction* fade = FadeTo::create(1.0f, 10);
+    this->sprite->runAction(fade);
+    */
+
+    ActionInterval* action = MoveTo::create(2.0f, Point(0, 0));
+    /*
+    // Ease
+    this->sprite->runAction(EaseInOut::create(action, 2));
+    */
+    
+    /*
+    // EaseExponential
+    this->sprite->runAction(EaseExponentialInOut::create(action));
+    */
+    
+    /*
+    // EaseSine
+    this->sprite->runAction(EaseSineInOut::create(action));
+    */
+    
+    /*
+    // EaseElastic
+    this->sprite->runAction(EaseElasticOut::create(action, 0.3f));
+    */
+    
+    /*
+    // EaseBounce
+    this->sprite->runAction(EaseBounceOut::create(action));
+    */
+    
+    /*
+    // EaseBack
+    this->sprite->runAction(EaseBackOut::create(action));
+    */
+    
+    /*
+    // Sequence
+    Sequence* seq = Sequence::create(
+        EaseInOut::create(MoveTo::create(2.0f, Point(0, 0)), 2),
+        EaseInOut::create(ScaleTo::create(1.0f, 2.0f), 2)
+    );
+    this->sprite->runAction(seq);
+    */
+    
+    /*
+    // With Tow Actions
+    Spawn* spawn = Spawn::createWithTwoActions(
+        EaseInOut::create(MoveTo::create(2.0f, Point(0, 0)), 2),
+        EaseInOut::create(ScaleTo::create(1.0f, 2.0f), 2)
+    );
+    this->sprite->runAction(spawn);
+    */
+    
+    // Delay
+    Sequence* seq = Sequence::create(
+        EaseInOut::create(MoveTo::create(2.0f, Point(0, 0)), 2),
+        DelayTime::create(3.0f),
+        EaseInOut::create(ScaleTo::create(1.0f, 2.0f), 2)
+    );
+    this->sprite->runAction(seq);
 }
 
 
