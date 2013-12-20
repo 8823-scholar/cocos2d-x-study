@@ -71,7 +71,64 @@ bool HelloWorld::init()
 
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
-    
+
+    /*
+    // プリファレンスデータ
+    UserDefault* user = UserDefault::sharedUserDefault();
+    std::string stringValue = user->getStringForKey("stringKey", "default");
+    int intValue = user->getIntegerForKey("intKey", 2);
+    float floatValue = user->getFloatForKey("floatKey", 0.1f);
+    bool boolValue = user->getBoolForKey("boolKey", false);
+    log("%s", stringValue.c_str());
+    log("%d", intValue);
+    log("%f", floatValue);
+    log("%s", boolValue ? "true" : "false");
+    user->setStringForKey("stringKey", "bar");
+    user->setIntegerForKey("intKey", 10);
+    user->setFloatForKey("floatKey", 10.2f);
+    user->setBoolForKey("boolKey", true);
+    user->flush();
+    */
+
+    // Dictionary
+    FileUtils* fileUtils = FileUtils::sharedFileUtils();
+    std::string filepath = fileUtils->getWritablePath() + "foo.plist";
+    Dictionary* dictionary = NULL;
+    if (fileUtils->isFileExist(filepath)) {
+        dictionary = Dictionary::createWithContentsOfFile(filepath.c_str());
+    } else {
+        dictionary = Dictionary::create();
+    }
+
+    String* stringValue = (String*)dictionary->objectForKey("stringKey");
+    Array* arrayValues = (Array*)dictionary->objectForKey("arrayKey");
+    Dictionary* dictionaryValues = (Dictionary*)dictionary->objectForKey("dictionaryKey");
+    if (! dictionaryValues) {
+        dictionaryValues = Dictionary::create();
+    }
+    Object* arrayValue = NULL;
+    log("%s", stringValue->getCString());
+    CCARRAY_FOREACH(arrayValues, arrayValue) {
+        String* value = (String*)arrayValue;
+        log("%s", value->getCString());
+    }
+    String* dicValue1 = (String*)dictionaryValues->objectForKey("dictionary_key1");
+    String* dicValue2 = (String*)dictionaryValues->objectForKey("dictionary_key2");
+    if (dicValue1) {
+        log("%s", dicValue1->getCString());
+    }
+    if (dicValue2) {
+        log("%s", dicValue2->getCString());
+    }
+
+    dictionary->setObject(ccs("value"), "stringKey");
+    dictionary->setObject(Array::create(ccs("array_value1"), ccs("array_value2"), NULL), "arrayKey");
+    dictionaryValues->setObject(ccs("dictionary_value1"), "dictionary_key1");
+    dictionaryValues->setObject(ccs("dictionary_value2"), "dictionary_key2");
+    dictionary->setObject(dictionaryValues, "dictionaryKey");
+    //dictionary->setObject(Integer(10), "intKey");
+    dictionary->writeToFile(filepath.c_str());
+
     return true;
 }
 
