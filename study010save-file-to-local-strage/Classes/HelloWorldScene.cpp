@@ -1,4 +1,7 @@
 #include "HelloWorldScene.h"
+#include "network/HttpClient.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 USING_NS_CC;
 
@@ -63,15 +66,13 @@ bool HelloWorld::init()
     // add the label as a child to this layer
     this->addChild(label, 1);
 
-    // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
 
-    // position the sprite on the center of the screen
-    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    auto request = new extension::HttpRequest();
+    request->setUrl("http://befool.co.jp/images/logo_befool.jpg");
+    request->setRequestType(extension::HttpRequest::Type::GET);
+    request->setResponseCallback(this, httpresponse_selector(HelloWorld::onHttpRequestCompleted));
+    extension::HttpClient::getInstance()->send(request);
 
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
-    
     return true;
 }
 
@@ -84,3 +85,40 @@ void HelloWorld::menuCloseCallback(Object* pSender)
     exit(0);
 #endif
 }
+
+/**
+ * ファイルDL正常終了コールバック
+ */
+void HelloWorld::onHttpRequestCompleted(extension::HttpClient* sender, extension::HttpResponse* response)
+{
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    Point origin = Director::getInstance()->getVisibleOrigin();
+
+    auto fileUtils = FileUtils::sharedFileUtils();
+    std::string filename = fileUtils->getWritablePath() + "hoge.jpg";
+
+    if (fileUtils->isFileExist(filename)) {
+        log("file exist. use hoge.jpg.");
+
+        auto sprite = Sprite::create(filename.c_str());
+        sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+        this->addChild(sprite, 0);
+    } else {
+        log("no file exist. use default image, and save the file.");
+
+        if (response->isSucceed()) {
+            std::vector<char>* buffer = response->getResponseData();
+            auto* img = new Image();
+            img->initWithImageData(reinterpret_cast<unsigned char*>(&(buffer->front())), buffer->size());
+            img->saveToFile(filename.c_str());
+
+            auto* texture = new Texture2D();
+            texture->initWithImage(img);
+            
+            auto sprite = Sprite::createWithTexture(texture);
+            sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+            this->addChild(sprite, 0);
+        }
+    }
+}
+
