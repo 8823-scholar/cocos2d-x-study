@@ -1,4 +1,5 @@
 #include "HelloWorldScene.h"
+#include "CCWebView.h"
 
 USING_NS_CC;
 
@@ -63,14 +64,10 @@ bool HelloWorld::init()
     // add the label as a child to this layer
     this->addChild(label, 1);
 
-    // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
-
-    // position the sprite on the center of the screen
-    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
+    auto* webview = webview_plugin::CCWebView::create();
+    webview->setRect(100, 100, visibleSize.width - 110, visibleSize.height);
+    webview->setVisibility(true);
+    webview->loadUrl("http://ameblo.jp/minka-ri/");
     
     return true;
 }
