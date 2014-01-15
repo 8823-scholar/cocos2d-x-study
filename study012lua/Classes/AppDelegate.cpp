@@ -35,7 +35,8 @@ bool AppDelegate::applicationDidFinishLaunching()
     auto engine = LuaEngine::getInstance();
     ScriptEngineManager::getInstance()->setScriptEngine(engine);
     
-    std::string path = FileUtils::getInstance()->fullPathForFilename("hello.lua");
+    //std::string path = FileUtils::getInstance()->fullPathForFilename("hello.lua");
+    std::string path = FileUtils::getInstance()->fullPathForFilename("hello.luajit");
     engine->executeScriptFile(path.c_str());
 
     return true;

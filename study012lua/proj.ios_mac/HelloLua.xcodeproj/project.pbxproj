@@ -25,7 +25,6 @@
 		1AC3623316D47C5C000847F2 /* effect1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622716D47C5C000847F2 /* effect1.wav */; };
 		1AC3623416D47C5C000847F2 /* farm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622816D47C5C000847F2 /* farm.jpg */; };
 		1AC3623516D47C5C000847F2 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622916D47C5C000847F2 /* fonts */; };
-		1AC3623616D47C5C000847F2 /* hello.lua in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622A16D47C5C000847F2 /* hello.lua */; };
 		1AC3623716D47C5C000847F2 /* hello2.lua in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622B16D47C5C000847F2 /* hello2.lua */; };
 		1AC3623816D47C5C000847F2 /* land.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622C16D47C5C000847F2 /* land.png */; };
 		1AC3623916D47C5C000847F2 /* menu1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622D16D47C5C000847F2 /* menu1.png */; };
@@ -60,7 +59,6 @@
 		5023814D17EBBCE400990C9B /* effect1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622716D47C5C000847F2 /* effect1.wav */; };
 		5023814F17EBBCE400990C9B /* farm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622816D47C5C000847F2 /* farm.jpg */; };
 		5023815017EBBCE400990C9B /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622916D47C5C000847F2 /* fonts */; };
-		5023815117EBBCE400990C9B /* hello.lua in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622A16D47C5C000847F2 /* hello.lua */; };
 		5023815217EBBCE400990C9B /* hello2.lua in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622B16D47C5C000847F2 /* hello2.lua */; };
 		5023815317EBBCE400990C9B /* land.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622C16D47C5C000847F2 /* land.png */; };
 		5023815617EBBCE400990C9B /* menu1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622D16D47C5C000847F2 /* menu1.png */; };
@@ -101,6 +99,7 @@
 		50D7C97417EBBEF7005D0B91 /* libcocos2dx-extensions Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF4C3CF1786631700122817 /* libcocos2dx-extensions Mac.a */; };
 		50D7C97517EBBEF7005D0B91 /* libCocosDenshion Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF4C3D51786631700122817 /* libCocosDenshion Mac.a */; };
 		50D7C97617EBBEF7005D0B91 /* libluabindings Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF4C3D91786631700122817 /* libluabindings Mac.a */; };
+		DB0A39621886562F006836AA /* hello.luajit in Resources */ = {isa = PBXBuildFile; fileRef = DB0A39611886562E006836AA /* hello.luajit */; };
 		F293B3CD15EB7BE500256477 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F293B3CC15EB7BE500256477 /* QuartzCore.framework */; };
 		F293B3D115EB7BE500256477 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F293B3D015EB7BE500256477 /* OpenAL.framework */; };
 		F293B3D315EB7BE500256477 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F293B3D215EB7BE500256477 /* AudioToolbox.framework */; };
@@ -223,6 +222,13 @@
 			remoteGlobalIDString = A07A4E0B178386390073F6A7;
 			remoteInfo = "build-all-libs iOS";
 		};
+		DB0A395F18863F10006836AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AF4C3B91786631600122817 /* cocos2d_libs.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DB30828F186D2331000F199C;
+			remoteInfo = "WebView iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -244,7 +250,6 @@
 		1AC3622716D47C5C000847F2 /* effect1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = effect1.wav; path = ../Resources/effect1.wav; sourceTree = "<group>"; };
 		1AC3622816D47C5C000847F2 /* farm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = farm.jpg; path = ../Resources/farm.jpg; sourceTree = "<group>"; };
 		1AC3622916D47C5C000847F2 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = ../Resources/fonts; sourceTree = "<group>"; };
-		1AC3622A16D47C5C000847F2 /* hello.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hello.lua; path = ../Resources/hello.lua; sourceTree = "<group>"; };
 		1AC3622B16D47C5C000847F2 /* hello2.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hello2.lua; path = ../Resources/hello2.lua; sourceTree = "<group>"; };
 		1AC3622C16D47C5C000847F2 /* land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = land.png; path = ../Resources/land.png; sourceTree = "<group>"; };
 		1AC3622D16D47C5C000847F2 /* menu1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu1.png; path = ../Resources/menu1.png; sourceTree = "<group>"; };
@@ -285,6 +290,7 @@
 		50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		50D7C96D17EBBEE6005D0B91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		50D7C96F17EBBEEC005D0B91 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		DB0A39611886562E006836AA /* hello.luajit */ = {isa = PBXFileReference; lastKnownFileType = file; path = hello.luajit; sourceTree = "<group>"; };
 		F293B3C815EB7BE500256477 /* HelloLua iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloLua iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F293B3CC15EB7BE500256477 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F293B3CE15EB7BE500256477 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -383,6 +389,7 @@
 				1AF4C3E31786631700122817 /* libCocosDenshion iOS.a */,
 				1AF4C3E51786631700122817 /* libjsbindings iOS.a */,
 				1AF4C3E71786631700122817 /* libluabindings iOS.a */,
+				DB0A396018863F10006836AA /* libWebView iOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -493,6 +500,7 @@
 		F293BC4615EB859D00256477 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DB0A39611886562E006836AA /* hello.luajit */,
 				1AC3622316D47C5C000847F2 /* background.mp3 */,
 				1AC3622416D47C5C000847F2 /* background.ogg */,
 				1AC3622516D47C5C000847F2 /* crop.png */,
@@ -500,7 +508,6 @@
 				1AC3622716D47C5C000847F2 /* effect1.wav */,
 				1AC3622816D47C5C000847F2 /* farm.jpg */,
 				1AC3622916D47C5C000847F2 /* fonts */,
-				1AC3622A16D47C5C000847F2 /* hello.lua */,
 				1AC3622B16D47C5C000847F2 /* hello2.lua */,
 				1AC3622C16D47C5C000847F2 /* land.png */,
 				1AC3622D16D47C5C000847F2 /* menu1.png */,
@@ -558,7 +565,7 @@
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
 					F293B3C715EB7BE500256477 = {
-						DevelopmentTeam = MDDB52YB8L;
+						DevelopmentTeam = K46TDP5C2W;
 					};
 				};
 			};
@@ -685,6 +692,13 @@
 			remoteRef = 1AF4C3E61786631700122817 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		DB0A396018863F10006836AA /* libWebView iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libWebView iOS.a";
+			remoteRef = DB0A395F18863F10006836AA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -699,7 +713,6 @@
 				5023814D17EBBCE400990C9B /* effect1.wav in Resources */,
 				5023814F17EBBCE400990C9B /* farm.jpg in Resources */,
 				5023815017EBBCE400990C9B /* fonts in Resources */,
-				5023815117EBBCE400990C9B /* hello.lua in Resources */,
 				5023815217EBBCE400990C9B /* hello2.lua in Resources */,
 				5023815317EBBCE400990C9B /* land.png in Resources */,
 				5023815617EBBCE400990C9B /* menu1.png in Resources */,
@@ -735,7 +748,6 @@
 				5023811917EBBCAC00990C9B /* Default-568h@2x.png in Resources */,
 				1AC3623416D47C5C000847F2 /* farm.jpg in Resources */,
 				1AC3623516D47C5C000847F2 /* fonts in Resources */,
-				1AC3623616D47C5C000847F2 /* hello.lua in Resources */,
 				5091733917ECE17A00D62437 /* Icon-58.png in Resources */,
 				1AC3623716D47C5C000847F2 /* hello2.lua in Resources */,
 				1AC3623816D47C5C000847F2 /* land.png in Resources */,
@@ -746,6 +758,7 @@
 				5023812217EBBCAC00990C9B /* Icon-76.png in Resources */,
 				5091733A17ECE17A00D62437 /* Icon-80.png in Resources */,
 				1A0227AC17A3AA3500B867AD /* AudioEngine.lua in Resources */,
+				DB0A39621886562F006836AA /* hello.luajit in Resources */,
 				1A0227AD17A3AA3500B867AD /* CCBReaderLoad.lua in Resources */,
 				1A0227AE17A3AA3500B867AD /* Cocos2dConstants.lua in Resources */,
 				1A0227AF17A3AA3500B867AD /* Deprecated.lua in Resources */,
@@ -971,6 +984,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1005,6 +1019,7 @@
 					"\"$(SRCROOT)/../../../scripting/lua/luajit/ios\"",
 					"\"$(SRCROOT)/../../../external/libwebsockets/ios/lib\"",
 				);
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1015,6 +1030,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
@@ -1048,6 +1064,7 @@
 					"\"$(SRCROOT)/../../../scripting/lua/luajit/ios\"",
 					"\"$(SRCROOT)/../../../external/libwebsockets/ios/lib\"",
 				);
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
