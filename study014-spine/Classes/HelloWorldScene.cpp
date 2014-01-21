@@ -1,4 +1,5 @@
 #include "HelloWorldScene.h"
+#include "spine/CCSkeletonAnimation.h"
 
 USING_NS_CC;
 
@@ -63,15 +64,12 @@ bool HelloWorld::init()
     // add the label as a child to this layer
     this->addChild(label, 1);
 
-    // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
+    // spine
+    auto animation = extension::CCSkeletonAnimation::createWithFile("skeleton.json", "skeleton.atlas");
+    animation->setPosition(Point(visibleSize.width/2 + origin.x, origin.y));
+    animation->setAnimation("b", true);
+    this->addChild(animation, 0);
 
-    // position the sprite on the center of the screen
-    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
-    
     return true;
 }
 
