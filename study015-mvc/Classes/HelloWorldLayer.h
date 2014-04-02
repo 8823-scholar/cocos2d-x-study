@@ -11,6 +11,8 @@ public:
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();  
 
+    virtual Node* getNodeByPoint(Point point);
+
     virtual void handleEvent(float time);
     virtual bool onTouchBegan(Touch* touch, Event* event);
     virtual void onTouchEnded(Touch* touch, Event* event);
@@ -19,6 +21,7 @@ public:
     CREATE_FUNC(HelloWorldLayer);
 
 private:
+    Touch* touch;
     bool touch_began = false;
     float touch_began_time;
     float touch_ended_time;

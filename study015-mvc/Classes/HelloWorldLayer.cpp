@@ -1,4 +1,5 @@
 #include "HelloWorldLayer.h"
+#include "typeinfo"
 
 USING_NS_CC;
 
@@ -32,6 +33,21 @@ bool HelloWorldLayer::init()
 
 
 
+Node* HelloWorldLayer::getNodeByPoint(Point point)
+{
+    auto children = this->getChildren();
+    for (auto child : children) {
+        CCLOG("%f, %f", child->getPositionX(), child->getPositionY());
+
+        if (child->getBoundingBox().containsPoint(point)) {
+            return child;
+        }
+    }
+    return NULL;
+}
+
+
+
 /**
  * handle event.
  */
@@ -41,13 +57,14 @@ void HelloWorldLayer::handleEvent(float time)
         this->touch_ended_time ++;
         //CCLOG("%f", this->touch_ended_time);
     } else if (this->touch_began_time != this->touch_ended_time) {
-        CCLOG("touch_ended_time: %f", this->touch_ended_time);
-
-        // single tap
-        if (this->touch_ended_time < 10) {
-            CCLOG("tapped !");
-        } else {
-            CCLOG("long tapped !");
+        auto node = this->getNodeByPoint(this->touch->getLocation());
+        if (node) {
+            // single tap
+            if (this->touch_ended_time < 20) {
+                CCLOG("tapped !");
+            } else {
+                CCLOG("long tapped !");
+            }
         }
         this->touch_began_time = 0;
         this->touch_ended_time = 0;
@@ -73,6 +90,7 @@ bool HelloWorldLayer::onTouchBegan(Touch* touch, Event* event)
 void HelloWorldLayer::onTouchEnded(Touch* touch, Event* event)
 {
     CCLOG("ended");
+    this->touch = touch;
     this->touch_began = false;
 }
 
