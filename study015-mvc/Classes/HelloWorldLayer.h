@@ -3,14 +3,25 @@
 
 #include "cocos2d.h"
 
-class HelloWorldLayer : public cocos2d::Layer
+USING_NS_CC;
+
+class HelloWorldLayer : public Layer
 {
 public:
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();  
+
+    virtual void handleEvent(float time);
+    virtual bool onTouchBegan(Touch* touch, Event* event);
+    virtual void onTouchEnded(Touch* touch, Event* event);
     
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorldLayer);
+
+private:
+    bool touch_began = false;
+    float touch_began_time;
+    float touch_ended_time;
 };
 
 #endif // __HELLOWORLD_LAYER_H__
