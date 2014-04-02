@@ -1,0 +1,19 @@
+
+blue.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+block
+  rotate: false
+  xy: 2, 2
+  size: 98, 98
+  orig: 100, 100
+  offset: 1, 1
+  index: -1
+block2
+  rotate: false
+  xy: 102, 2
+  size: 98, 98
+  orig: 100, 100
+  offset: 1, 1
+  index: -1
