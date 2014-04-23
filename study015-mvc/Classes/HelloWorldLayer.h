@@ -2,6 +2,7 @@
 #define __HELLOWORLD_LAYER_H__
 
 #include "cocos2d.h"
+#include "HelloWorldScene.h"
 
 USING_NS_CC;
 
@@ -12,6 +13,7 @@ public:
     virtual bool init();  
 
     virtual Node* getNodeByPoint(Point point);
+    virtual HelloWorldScene* getScene();
 
     virtual void handleEvent(float time);
     virtual bool onTouchBegan(Touch* touch, Event* event);
@@ -20,8 +22,12 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorldLayer);
 
+protected:
+    HelloWorldScene* _parent;
+
 private:
     Touch* touch;
+    Event* touchEvent;
     bool touch_began = false;
     float touch_began_time;
     float touch_ended_time;

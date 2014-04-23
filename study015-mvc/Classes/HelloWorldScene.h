@@ -2,15 +2,21 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "Controller.h"
 
 class HelloWorldScene : public cocos2d::Scene
 {
 public:
-    // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
-    virtual bool init();  
-    
-    // implement the "static create()" method manually
+    Controller::Controller* controller;
+
+    virtual bool init();
     CREATE_FUNC(HelloWorldScene);
+
+    virtual HelloWorldScene* getScene();
+
+    virtual void tap(cocos2d::Node* target);
+    virtual void longTap(cocos2d::Node* target);
+    virtual void setController(Controller::Controller* controller);
 };
 
 #endif // __HELLOWORLD_SCENE_H__
