@@ -11,6 +11,8 @@ namespace Controller
     public:
         static PuzzleController* create(cocos2d::Scene* scene);
         virtual bool init();
+
+        virtual void tap(cocos2d::Node* target);
     };
 }
 

@@ -22,9 +22,6 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorldLayer);
 
-protected:
-    HelloWorldScene* _parent;
-
 private:
     Touch* touch;
     Event* touchEvent;

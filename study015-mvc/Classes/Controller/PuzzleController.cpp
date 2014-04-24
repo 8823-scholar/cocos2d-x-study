@@ -14,4 +14,9 @@ namespace Controller
     {
         return true;
     }
+
+    void PuzzleController::tap(cocos2d::Node* target)
+    {
+        CCLOG("PuzzleController::tap");
+    }
 }

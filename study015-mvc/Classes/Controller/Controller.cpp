@@ -29,4 +29,14 @@ namespace Controller
     {
         this->scene = scene;
     }
+
+    void Controller::tap(cocos2d::Node* target)
+    {
+        CCLOG("Controller::tap");
+    }
+    
+    void Controller::longTap(cocos2d::Node* target)
+    {
+        CCLOG("Controller::longTap");
+    }
 }

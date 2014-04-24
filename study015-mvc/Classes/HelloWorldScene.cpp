@@ -14,7 +14,7 @@ bool HelloWorldScene::init()
 
     auto controller = Controller::PuzzleController::create(this);
     this->setController(controller);
-    
+
     auto layer = HelloWorldLayer::create();
     layer->setTag(5);
     this->addChild(layer);
@@ -25,11 +25,13 @@ bool HelloWorldScene::init()
 void HelloWorldScene::tap(Node* target)
 {
     CCLOG("HelloWorldScene::tap");
+    this->controller->tap(target);
 }
 
 void HelloWorldScene::longTap(Node* target)
 {
     CCLOG("HelloWorldScene::longTap");
+    this->controller->longTap(target);
 }
 
 void HelloWorldScene::setController(Controller::Controller* controller)

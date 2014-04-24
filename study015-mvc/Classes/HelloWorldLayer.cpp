@@ -107,8 +107,8 @@ void HelloWorldLayer::onTouchEnded(Touch* touch, Event* event)
 
 HelloWorldScene* HelloWorldLayer::getScene()
 {
-    if(!_parent) return nullptr;
+    if(!this->_parent) return nullptr;
     
-    return _parent->getScene();
+    return dynamic_cast<HelloWorldScene*>(this->_parent->getScene());
 }
 
