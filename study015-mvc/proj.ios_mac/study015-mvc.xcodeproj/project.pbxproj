@@ -71,6 +71,7 @@
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 		DB9B98AC190A0E1300B39A9E /* View.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB9B98AB190A0E1300B39A9E /* View.cpp */; };
 		DB9B98AF190A0E3500B39A9E /* PuzzleView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB9B98AE190A0E3500B39A9E /* PuzzleView.cpp */; };
+		DB9B98B4190A1A8800B39A9E /* PuzzleBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB9B98B2190A1A8800B39A9E /* PuzzleBlock.cpp */; };
 		DBA83FB118EC1F47007AB94E /* block in Resources */ = {isa = PBXBuildFile; fileRef = DBA83FB018EC1F47007AB94E /* block */; };
 		DBA83FB618EC2B91007AB94E /* HelloWorldLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBA83FB418EC2B91007AB94E /* HelloWorldLayer.cpp */; };
 		DBA83FBB18ED760E007AB94E /* PuzzleController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBA83FB718ED760E007AB94E /* PuzzleController.cpp */; };
@@ -277,6 +278,8 @@
 		DB9B98AB190A0E1300B39A9E /* View.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = View.cpp; path = ../Classes/View/View.cpp; sourceTree = "<group>"; };
 		DB9B98AD190A0E3500B39A9E /* PuzzleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PuzzleView.h; path = ../Classes/View/PuzzleView.h; sourceTree = "<group>"; };
 		DB9B98AE190A0E3500B39A9E /* PuzzleView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PuzzleView.cpp; path = ../Classes/View/PuzzleView.cpp; sourceTree = "<group>"; };
+		DB9B98B2190A1A8800B39A9E /* PuzzleBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PuzzleBlock.cpp; path = ../Classes/Model/PuzzleBlock.cpp; sourceTree = "<group>"; };
+		DB9B98B3190A1A8800B39A9E /* PuzzleBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PuzzleBlock.h; path = ../Classes/Model/PuzzleBlock.h; sourceTree = "<group>"; };
 		DBA83FB018EC1F47007AB94E /* block */ = {isa = PBXFileReference; lastKnownFileType = folder; path = block; sourceTree = "<group>"; };
 		DBA83FB418EC2B91007AB94E /* HelloWorldLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldLayer.cpp; path = ../Classes/HelloWorldLayer.cpp; sourceTree = "<group>"; };
 		DBA83FB518EC2B91007AB94E /* HelloWorldLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelloWorldLayer.h; path = ../Classes/HelloWorldLayer.h; sourceTree = "<group>"; };
@@ -356,6 +359,7 @@
 				DBD27A051909FFDA00500F33 /* View */,
 				DBA83FBD18ED761E007AB94E /* Controller */,
 				DBA83FB418EC2B91007AB94E /* HelloWorldLayer.cpp */,
+				DB9B98B0190A19BC00B39A9E /* Model */,
 				DBA83FB518EC2B91007AB94E /* HelloWorldLayer.h */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
@@ -483,6 +487,15 @@
 			);
 			name = Resources;
 			path = ../Resources;
+			sourceTree = "<group>";
+		};
+		DB9B98B0190A19BC00B39A9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB9B98B2190A1A8800B39A9E /* PuzzleBlock.cpp */,
+				DB9B98B3190A1A8800B39A9E /* PuzzleBlock.h */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		DBA83FBD18ED761E007AB94E /* Controller */ = {
@@ -722,6 +735,7 @@
 				DBA83FB618EC2B91007AB94E /* HelloWorldLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
+				DB9B98B4190A1A8800B39A9E /* PuzzleBlock.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

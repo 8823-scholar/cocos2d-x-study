@@ -2,6 +2,7 @@
 #include "HelloWorldLayer.h"
 #include "PuzzleController.h"
 #include "PuzzleView.h"
+#include <array>
 
 USING_NS_CC;
 
@@ -15,6 +16,9 @@ bool HelloWorldScene::init()
 
     auto controller = Controller::PuzzleController::create(this);
     this->setController(controller);
+
+    // initial blocks
+    this->pushBlocks();
 
     auto view = View::PuzzleView::create(this);
     this->setView(view);
@@ -33,6 +37,25 @@ void HelloWorldScene::longTap(Node* target)
     CCLOG("HelloWorldScene::longTap");
     this->controller->longTap(target);
 }
+
+
+void HelloWorldScene::pushBlocks()
+{
+    for (int i = 0; i < this->blocks.size(); i++) {
+        auto b = this->blocks[i];
+        if (! b) {
+            auto block = Model::PuzzleBlock::createRandom();
+            block->setCoordinateX(i);
+            this->blocks[i] = block;
+        }
+    }
+}
+std::array<Model::PuzzleBlock*, 7> HelloWorldScene::getBlocks()
+{
+    return this->blocks;
+}
+
+
 
 void HelloWorldScene::setController(Controller::Controller* controller)
 {

@@ -11,6 +11,15 @@ bool HelloWorldLayer::init()
         return false;
     }
     
+    // touch
+    auto listener = EventListenerTouchOneByOne::create();
+    listener->onTouchBegan = CC_CALLBACK_2(HelloWorldLayer::onTouchBegan, this);
+    listener->onTouchEnded = CC_CALLBACK_2(HelloWorldLayer::onTouchEnded, this);
+    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
+
+    // handling event
+    this->schedule(schedule_selector(HelloWorldLayer::handleEvent));
+   
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
@@ -20,14 +29,6 @@ bool HelloWorldLayer::init()
     sprite->setTag(3);
     this->addChild(sprite, 0);
 
-    // touch
-    auto listener = EventListenerTouchOneByOne::create();
-    listener->onTouchBegan = CC_CALLBACK_2(HelloWorldLayer::onTouchBegan, this);
-    listener->onTouchEnded = CC_CALLBACK_2(HelloWorldLayer::onTouchEnded, this);
-    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
-
-    // handling event
-    this->schedule(schedule_selector(HelloWorldLayer::handleEvent));
     
     return true;
 }
