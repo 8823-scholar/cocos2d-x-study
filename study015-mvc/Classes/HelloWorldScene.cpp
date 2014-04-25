@@ -1,6 +1,7 @@
 #include "HelloWorldScene.h"
 #include "HelloWorldLayer.h"
 #include "PuzzleController.h"
+#include "PuzzleView.h"
 
 USING_NS_CC;
 
@@ -15,9 +16,8 @@ bool HelloWorldScene::init()
     auto controller = Controller::PuzzleController::create(this);
     this->setController(controller);
 
-    auto layer = HelloWorldLayer::create();
-    layer->setTag(5);
-    this->addChild(layer);
+    auto view = View::PuzzleView::create(this);
+    this->setView(view);
 
     return true;
 }
@@ -37,6 +37,10 @@ void HelloWorldScene::longTap(Node* target)
 void HelloWorldScene::setController(Controller::Controller* controller)
 {
     this->controller = controller;
+}
+void HelloWorldScene::setView(View::View* view)
+{
+    this->view = view;
 }
 
 HelloWorldScene* HelloWorldScene::getScene()

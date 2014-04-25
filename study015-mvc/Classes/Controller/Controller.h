@@ -6,7 +6,7 @@
 namespace Controller
 {
 
-    class Controller
+    class Controller : public cocos2d::Ref
     {
     public:
         Controller();
